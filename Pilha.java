@@ -41,15 +41,6 @@ public class Pilha{
         }
         return s + "\n";
     }
-
-    // invertendo pilha
-    public void invertePilha(){
-        Pilha aux = new Pilha();
-        while(pilhaVazia()){
-            aux.push(this.pop());
-        }
-        this.topo = aux.topo;
-    }
 }
 
 class No{
