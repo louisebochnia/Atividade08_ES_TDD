@@ -20,4 +20,17 @@ public class Pilha {
         ultimo++;
         ocupacao++;
     }
+
+    public int pop(){
+        if(pilhaVazia()) throw new RuntimeException("falha no desempilhamento :C");
+        int temp = ultimo;
+        dados[--ultimo] = dados[temp];
+        ocupacao--;
+        return temp;
+    }
+
+    public int peek(){
+        if(pilhaVazia()) throw new RuntimeException("Falha na consulta :C");
+        return dados[ultimo];
+    }
 }
